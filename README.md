@@ -1,9 +1,27 @@
-Web based Coffee Beans Detection.
-We are detecting 4 classes from the input image of Beans:
---Broken
---COCO
---Immature
---Normal
+# Coffee Beans Detection Web Application
+
+This project is a web-based application for detecting coffee beans' quality using YOLOv5 and Django. The application classifies coffee beans into four categories from an input image:
+
+- **Broken**
+- **COCO**
+- **Immature**
+- **Normal**
+
+## Features
+
+- **Django Backend**:
+  - Web-based interface to upload and analyze coffee bean images.
+  
+- **YOLOv5 Integration**:
+  - Utilizes a pre-trained YOLOv5 model for object detection and classification.
+
+- **Image Processing**:
+  - Accepts images of coffee beans as input.
+  - Outputs the classification of detected beans with bounding boxes.
+
+- **Real-time Results**:
+  - Displays the results of detection and classification directly on the web interface.
+
 ## Run the Script
 ### Step 1:
 Clone the repository
