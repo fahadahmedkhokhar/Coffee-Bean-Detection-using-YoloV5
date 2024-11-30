@@ -26,3 +26,8 @@ Install requirements using requirements.txt
 ```bash
 pip install -r requirement.txt
 ```
+
+## Report
+
+[Documents](https://github.com/fahadahmedkhokhar/Coffee-Bean-Detection-using-YoloV5/blob/master/Report.docx) are available
+
