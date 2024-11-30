@@ -1,0 +1,14 @@
+names:
+- Broken
+- Burnt
+- Green
+- Normal
+nc: 4
+roboflow:
+  license: CC BY 4.0
+  project: bunnah-tmpmr
+  url: https://universe.roboflow.com/coffee-beans-4qgnq/bunnah-tmpmr/dataset/13
+  version: 13
+  workspace: coffee-beans-4qgnq
+train: Bunnah-13/train/images
+val: Bunnah-13/test/images

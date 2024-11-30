@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Main page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/Admin.css'%}">
+</head>
+<body>
+    <div id="Main" class="AdminContainer" id="adminmain">
+        <div  class="Content">
+        <div class="wrapper">
+
+            <svg width="200" height="153" viewBox="0 0 318 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M158.5 194.125C200.729 194.125 239.134 206.357 267.387 223.576C281.487 232.213 293.543 242.347 302.25 253.363C310.815 264.22 317.125 277.192 317.125 291.062C317.125 305.956 309.881 317.694 299.447 326.066C289.577 333.997 276.552 339.249 262.717 342.915C234.904 350.265 197.786 352.75 158.5 352.75C119.214 352.75 82.0956 350.283 54.2834 342.915C40.4477 339.249 27.4229 333.997 17.5529 326.066C7.10125 317.676 -0.125 305.956 -0.125 291.062C-0.125 277.192 6.18475 264.22 14.7505 253.363C23.4573 242.347 35.4951 232.213 49.6128 223.576C77.8656 206.357 116.288 194.125 158.5 194.125ZM158.5 0.25C181.872 0.25 204.287 9.53457 220.814 26.0612C237.34 42.5879 246.625 65.0028 246.625 88.375C246.625 111.747 237.34 134.162 220.814 150.689C204.287 167.215 181.872 176.5 158.5 176.5C135.128 176.5 112.713 167.215 96.1862 150.689C79.6596 134.162 70.375 111.747 70.375 88.375C70.375 65.0028 79.6596 42.5879 96.1862 26.0612C112.713 9.53457 135.128 0.25 158.5 0.25Z" fill="#304674"/>
+                </svg>
+
+            <h1>Hello, Full Name!</h1>
+            <div class="buttons">
+                <a href="{% url "main/admin_main" %}"><button id="managebtn">Manage Accounts</button></a>
+            </div>
+            <div class="buttons">
+            <a href="{% url "main/login" %}"><button id="logout">Log out</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

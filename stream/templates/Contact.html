@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/Contact.css'%}">
+</head>
+<body>
+<div class="Container">
+    <!--Navigaton Bar-->
+    <header>
+       <img class="logo" src="{% static 'assets/img/White_Bunnah.png'%}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="{% url 'main/Homepage' %}">Home</a></li>
+                <li><a href="{% url 'main/about' %}">About</a></li>
+                <a class="cta" href="{% url 'main/contact' %}"><button>Contact</button></a>
+                <li><a href="{% url 'main/login' %}">Login</a></li>
+            </ul>    
+        </nav>
+        
+    </header>
+
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="{% static 'assets/img/Contact.mp4'%}" type="video/mp4">
+    </video>
+
+    <div class="Content">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+        <title>Contact</title>
+      </head>
+      <body>
+
+        
+        <div class="PageTitle">Our Service</div> 
+        
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="center">
+         <h1> <span class="bold"> Unlock the Flavor </span> <br> Elevate your coffee experience with our cutting-edge computer vision system! </h1>
+         <p> Seamlessly detect and sort coffee beans into four distinct types,ensuring unparalleled quality and consistency in every cup. Say goodbye to guesswork and hello to precision with our innovative technology. Join the revolution in coffee bean detection today!  </p> 
+        </div>
+    </div>
+</div>
+    
+
+<div id="social-links">
+    <div class="left">
+        <a href="mailto:BunnahKSA@gmail.com">
+          <img src="{% static 'assets/img/mail.png'%}" alt="" width="120" height="120">
+            BunnahKSA@gmail.com
+        </a>
+    </div>
+
+    <div class="right">
+        <a href="https://twitter.com/BunnahKSA">
+          <img src="{% static 'assets/img/x.png'%}" alt="" width="50" height="50">
+            @BunnahKSA
+        </a>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

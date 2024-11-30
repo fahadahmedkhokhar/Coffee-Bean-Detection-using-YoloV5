@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    
+    .Container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255, 255, 0.2);
+    }
+    
+    .Content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+      
+      #loginbtn{
+        background-color: #525151;
+        margin-bottom: 30px;
+        margin-top: 15px;
+      }
+      
+      li, a, button{
+      font-family: Arial, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #edf0f1;
+      text-decoration: none;
+      }
+
+    /* <!--Navigaton Bar--> */
+
+    header{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color:  #485E45;
+      padding: 30px 10%;
+    }
+    
+    .logo{
+      width: 150px;
+      margin-right: auto;
+      cursor: pointer;
+    }
+    
+    .nav__links{
+      list-style: none;
+    }
+    
+    .nav__links li{
+      display: inline-block;
+      padding: 0px 20px;
+    }
+    
+    .nav__links li a{
+      transition: all 0.3s ease 0s;
+    }
+    
+    .nav__links li a:hover{
+      color: #929F7F;
+    }
+    
+    button{
+      padding: 9px 25px;
+      background-color:#929F7F;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        background-color: #f0f0f0; 
+      }
+
+      .video-wrapper {
+        position: relative; /* Relative positioning for the container */
+        width: 100%; /* Full width */
+        height: 400px; /* Adjust height as needed */
+        overflow: hidden; /* Hide overflowing content */
+      }
+      .video-wrapper video {
+        position: absolute;
+        top: 0px;
+        left:80px;
+        right: 80px;
+        width: 100%; /* Adjust width */
+        height: 100%; 
+        max-width: calc(100% - 162px); /* Adjust max-width */
+        object-fit: cover; 
+        z-index: -1; 
+        margin-bottom: 50px;
+        margin-top: 60px;
+        border-radius: 8px;
+      }
+      .container {
+        max-width: 1000px;
+        position: relative;
+        margin: 0 auto;
+        padding: 20px; /* Add padding to create space between content and container */
+        background-color: rgba(255, 255, 255, 0.8); /* Background color for the container */
+        border-radius: 8px; /* Rounded corners for the container */
+        text-align: justify; /* Center-align text */
+        margin-bottom: 50px;
+        margin-top: 60px;
+        height: 2600px;
+       
+      }
+
+      .container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .center {
+        text-align: center;
+      }
+      h1 {
+        font-family: 'serif';
+        font-size:  28px; 
+        color: #485E45; 
+        /* text-align: justify; */
+        font-weight: normal;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+      }
+      p {
+        font-family: 'serif';
+        font-size: 26px;
+        color: #57705F; /* Custom font size for paragraphs */
+        text-align: justify;
+      }
+
+      .text-container {
+  text-align: center; 
+}
+
+.Box {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px; /* Add padding to create space between content and container */
+    background-color: #57705F; /* Background color for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+
+      .PageTitle {
+        font-family: 'serif';
+        font-size: 4em; 
+        color: #5e4040;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+      }
+
+img {
+max-width: 100%;
+height: auto;  
+}
+.bold {
+    font-family: 'serif';
+    font-weight: bold; /* Make the text bold */
+  }
+  background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }

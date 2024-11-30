@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #485E45;
+        }
+
+        .alert-container {
+            width: 70%;
+            max-width: 800px;
+            height: 300px ;
+            margin: 100px auto;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #5e4040; 
+        }
+
+        .back-button {
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            padding: 15px 50px;
+            background-color: hsl(52, 24%, 71%);
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        #camera-container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Set the height for the camera feed */
+            overflow: hidden;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <title>Alerts</title>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <div class="alert-container">
+        <h2>Alerts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bean Type</th>
+                    <th>Alert Time</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody id="coffee-table-body">
+                <!-- Detected coffee types will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="camera-container">
+        <video id="video" playsinline></video>
+    </div>
+
+    <script>
+        async function setupCamera() {
+            const video = document.getElementById('video');
+            const stream = await navigator.mediaDevices.getUserMedia({ 'video': true });
+            video.srcObject = stream;
+
+            return new Promise((resolve) => {
+                video.onloadedmetadata = () => {
+                    resolve(video);
+                };
+            });
+        }
+
+        async function detectCoffee() {
+            const video = await setupCamera();
+            const model = await cocoSsd.load();
+
+            async function detect() {
+                const predictions = await model.detect(video);
+
+                const coffeeTableBody = document.getElementById('coffee-table-body');
+                coffeeTableBody.innerHTML = '';
+
+                predictions.forEach((prediction) => {
+                    const row = document.createElement('tr');
+                    const columns = ['class', 'score'];
+
+                    columns.forEach((column) => {
+                        const cell = document.createElement('td');
+                        cell.textContent = prediction[column] || '';
+                        row.appendChild(cell);
+                    });
+
+                    coffeeTableBody.appendChild(row);
+                });
+
+                requestAnimationFrame(detect);
+            }
+
+            detect();
+        }
+
+        detectCoffee();
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

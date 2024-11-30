@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employees Interface</title>
+<style>
+    body {
+        background-image: url('Image/roaster.gif');  
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 600px;
+        padding: 40px;
+        background-color: rgba(214, 202, 186, 0.8);
+        border-radius: 20px;
+        text-align: center;
+    }
+    .button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #485E45;
+        color: #FFFFFF;
+        text-decoration: none;
+        border: none;
+        border-radius: 40px;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    .logout-button {
+        background-color: #5E454A;;
+    }
+    .user-icon {
+        display: block;
+        margin: 0 auto 30px;
+        width: 150px;
+        height: 150px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="{% static 'assets/img/user_icon.png'%}" alt="User Icon" class="user-icon">
+        <h1>Welcome, User!</h1>
+        <a href="{% url 'main/live_stream' %}" class="button">View Functionalities</a>
+        <a href="{% url 'main/login' %}" class="button logout-button">Log Out</a>
+    </div>
+</div>
+</body>
+</html>

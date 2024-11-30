@@ -1,0 +1,63 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/Common.css'%}">
+</head>
+<body>
+<div class="Container">
+    <!--Navigaton Bar-->
+    <header>
+        <img class="logo" src="{% static 'assets/img/White_Bunnah.png'%}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="{% url 'main/Homepage' %}">Home</a></li>
+                <li><a href="{% url 'main/about' %}">About</a></li>
+                <li><a href="{% url 'main/contact' %}">Contact</a></li>
+            </ul>    
+        </nav>
+        <a class="cta" href="{% url 'main/login' %}"><button>Login</button></a>
+
+
+    </header>
+
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="{% static 'assets/img/Login.mp4'%}" type="video/mp4">
+    </video>
+
+    <div class="Content">
+        <div class="wrapper">
+            {% if error_message %}
+                <p>{{ error_message }}</p>
+            {% endif %}
+        <form method = "post">
+            {% csrf_token %}
+            <h1>Login</h1>
+
+            <div class="labels">
+            <label for="uname">Username<br></label>
+            </div>
+
+            <div class="input-box">
+            <input type="text" placeholder="Enter Username" name="username" id = "username"required>
+            </div>
+
+            <div class="labels">
+            <label for="psw" style="text-align: left;">Password</label>
+            </div>
+
+            <div class="input-box">
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            </div>
+
+            <button type="submit" class="btn" id="loginbtn" value="Login">Login</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

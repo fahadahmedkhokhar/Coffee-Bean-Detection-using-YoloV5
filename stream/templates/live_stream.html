@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Camera Feed</title>
+    <style>
+
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #485E45; /* Fallback color */
+        }
+
+        .container {
+            width: 600px; 
+            height: 400px; 
+            background-color: rgba(232, 234, 225, 0.8);
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 70%;
+            overflow: hidden;
+           /*  border-radius: 10px; 
+            border: 2px solid #304674; /* Added border */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .camera-text {
+            font-size: 24px;
+            color: #4C4C4C;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            width: 48%;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #304674;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-dashboard {
+            background-color: #5E454A;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #304674;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'main/employee' %}"><div class="back-button" onclick="goBack()">&lt; Back</div></a>
+    <div class="container">
+        <div class="camera-text">Camera Live Stream</div> <!-- Added text above the camera -->
+        <div class="video-container">
+            <img id="camera-feed" src="{% url 'video_feed' %}" autoplay playsinline></img>
+        </div>
+{#        <div id="camera-feed-container">#}
+{#        <img id="camera-feed" src="{% url 'main/camera_feed' %}" alt="Camera Feed">#}
+{#    </div>#}
+        <div class="button-container">
+            <a href="Alerts.html" class="button">Alerts</a>
+            <a href="Dashboard.html" class="button button-dashboard">Dashboard</a>
+        </div>
+    </div>
+
+{#    <script>#}
+{#         // Call function when page loads#}
+{#        $(document).ready(function () {#}
+{#            $('#camera-feed').on('error', function() {#}
+{#                // If there is an error loading the camera feed, reload the page#}
+{#                location.reload();#}
+{#            });#}
+{#        });#}
+        {#async function setupCamera() {#}
+        {#    const videoElement = document.getElementById('live-video');#}
+        {#    try {#}
+        {#        const stream = await navigator.mediaDevices.getUserMedia({ video: true });#}
+        {#        videoElement.srcObject = stream;#}
+        {#    } catch (err) {#}
+        {#        console.error('Error accessing the camera:', err);#}
+        {#    }#}
+        {#}#}
+        {##}
+        {#setupCamera();#}
+        {##}
+        {#function goBack() {#}
+        {#    window.history.back();#}
+        {#}#}
+{#    </script>#}
+</body>
+</html>

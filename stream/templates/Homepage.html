@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/Common.css'%}">
+</head>
+<body>
+<div class="Container">
+    <!--Navigaton Bar-->
+    <header>
+       <!-- <img class="logo" src="Image\White Bunnah.png" alt="logo"> -->
+        <nav>
+            <ul class="nav__links">
+                <a class="cta" href="{% url 'main/Homepage' %}"><button>Home</button></a>
+                <li><a href="{% url 'main/about' %}">About</a></li>
+                <li><a href="{% url 'main/contact' %}">Contact</a></li>
+                <li><a href="{% url 'main/login' %}">Login</a></li>
+            </ul>    
+        </nav>
+        
+    </header>
+
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="{% static 'assets/img/Home.mp4'%}" type="video/mp4">
+    </video>
+
+    <div class="Content">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; 
+          }
+          .text-container {
+      text-align: center; 
+    }
+          .PageTitle {
+            font-family: 'Arial', sans-serif;
+            font-size: 6em; 
+            color: white;
+            font-weight: bold;
+            margin-top: 110px; 
+          }
+
+        .SmallerLine{
+     /* font-family: 'Comic Sans MS', cursive; */
+      /* font-family: 'Arial', sans-serif; */
+      font-family: 'serif';
+      font-size: 1.5em; 
+      font-weight: bold;
+      margin-top: 30px; 
+      color: #301f02;
+    }
+    .Explore {
+      margin-top: 50px; /* was 15 before */
+      padding: 20px 60px; 
+      font-size: 1.3em; 
+      background-color: #5e4040; 
+      color: white; 
+      cursor: pointer;
+    }
+
+    .Explore:hover {
+      background-color: #5e4040; 
+    }
+
+    img {
+  max-width: 100%;
+  height: auto;
+  
+}
+.move-me {
+    margin-top: 80px; 
+}
+        </style>
+
+        <title>PageTitle</title>
+      </head>
+      <body>
+        <div class="page-container">
+        <div class="text-container">
+        <div class="text-container">
+        <!-- <div class="PageTitle">Bunnah</div> -->
+        <img src="{% static 'assets/img/White_Bunnah.png'%}" alt="" class="move-me">
+        <div class="SmallerLine">Where we Enhance Your Coffee Quality</div>
+        <button class="Explore" onclick="slidePage()">Explore</button>
+    </div>
+  
+    <script>
+        function slidePage() {
+          const pageContainer = document.querySelector('.page-container');
+          pageContainer.style.transform = 'translateY(-100%)';
+    
+          setTimeout(() => {
+            window.location.href = '{% url 'main/about' %}';
+          }, 300); 
+        }
+        <!-- <div class="PageTitle">Bunnah</div> -->   
+        </script>
+</div>
+
+</body>
+</html>

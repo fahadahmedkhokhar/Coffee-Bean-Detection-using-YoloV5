@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Object Detection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Real-time Object Detection</h1>
+    <div id="camera-feed-container">
+        <img id="camera-feed" src="{% url 'main/camera_feed' %}" alt="Camera Feed">
+    </div>
+
+    <script>
+        // Call function when page loads
+        $(document).ready(function () {
+            $('#camera-feed').on('error', function() {
+                // If there is an error loading the camera feed, reload the page
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

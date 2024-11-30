@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/About.css'%}">
+</head>
+<body>
+<div class="Container">
+    <!--Navigaton Bar-->
+    <header>
+       <img class="logo" src="{% static 'assets/img/White_Bunnah.png'%}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="{% url 'main/Homepage' %}">Home</a></li>
+                <a class="cta" href="{% url 'main/about' %}"><button>About</button></a>
+                <li><a href="{% url 'main/contact' %}">Contact</a></li>
+                <li><a href="{% url 'main/login' %}">Login</a></li>
+            </ul>    
+        </nav>
+
+
+    
+    </header>
+
+
+    <div class="Content">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>About Us</title>
+      </div>
+      </head>
+
+      <body>
+
+       <!--- <div class="text-container"> 
+        <div class="Box">
+        <div class="PageTitle">About Us</div> 
+      </div>
+    </div> -->
+
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="{% static 'assets/img/Home.mp4'%}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+            <h1> <span class="bold">Welcome to Bunnah</span>: Redefining Coffee Bean Quality Control with Advanced Computer Vision. </h1>
+             <p> At Bunnah, we're dedicated to enhancing every aspect of your coffee enjoyment. Our state-of-the-art object detection technology meticulously categorizes coffee beans into four distinct classes: Normal, Burnt, Green, and Broken. Through the fusion of sophisticated algorithms and precise visual analysis, we ensure that each bean meets the highest standards of quality and consistency. Join us on a journey where innovation meets tradition, shaping the future of coffee one bean at a time. 
+              Discover the art and science behind Bunnah, where every bean tells a story. </p>
+          </div>
+        </div>
+
+        <div class="text-container">
+
+       <!--- <div class="PageTitle">About The Team </div> -->
+
+      </div>
+</div>
+
+</body>
+</html>

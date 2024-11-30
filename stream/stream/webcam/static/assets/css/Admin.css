@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+    
+    .AdminContainer{
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .btn .btn-primary{
+    width: 45px !important;
+    height: 45px !important;
+    background-color: #929F7F !important;
+    border-radius: 50% !important;
+    }
+    .btn-edit {
+      padding: 5px 10px;
+      margin-left: 60px;
+      background-color: #525151;
+      margin-bottom: 15px;
+      margin-top: 7px;
+      width: 150px;
+      height: 45px;
+      color: white;
+      border-radius: 15px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #adminmng{
+      background-color: #304674 !important;
+    }
+
+    #adminmain{
+      background-color: rgba(255,255, 255, 0.2);
+    }
+    
+    .Content{
+    text-align: center;
+    }
+
+    .wrapper{
+      margin-top: 8%;
+      width: 420px;
+      background: white;
+      border-radius: 30px;
+    }
+
+    #Main{
+        background-color: #E8EAE1;
+    }
+
+    svg{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .buttons{
+        padding: 10px;
+    }
+
+    .buttons button{
+        color: white;
+        padding: 9px 25px;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+    }
+    
+    #managebtn{
+        width: 260px;
+        height: 50px;
+        background-color: #304674;
+    }
+
+    #logout{
+        width: 150px;
+        height: 50px;
+        margin-bottom: 30px;
+        background-color: #9C1D18;
+    }
+
+    #manage{
+        background-color: #304674;
+    }
+
+    /* Manage interface styles */
+ h2{
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+
+  }
+
+  .wrapper .mngbtn{
+     width: auto;
+    height: auto; 
+    padding: 10px;
+    margin: 15px;
+    justify-content: center;
+  }
+
+  #delbtn{
+    width: 45px;
+    height: 45px;
+    background-color: #9C1D18;
+    border-radius: 50%;
+  }
+
+  #addbtn{
+    background-color:#485E45;
+  }
+
+  #editbtn{
+    width: 45px;
+    height: 45px;
+    background-color: #929F7F;
+    border-radius: 50%;
+  }
+
+  .custom-btn {
+    width: 70px;
+    height: 35px;
+    margin-bottom: 8px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+  }
+
+a{
+  outline: none;
+}
+
+.btn {
+  /* display: flex !important; */
+  align-items: center !important; /* Center items vertically */
+  justify-content: center !important; /* Center items horizontally */
+  text-decoration: none !important; /* Remove default link underline */
+}
+
+  /* table container */
+/* #tbl{
+    width: 100%;
+    padding: 20px;
+    margin: 20px; 
+} */
+
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    align-items: center;
+  }
+
+th,tr{
+    margin:10px;
+    padding: 15px;
+}
+
+  th{
+    background-color: #DEDEDE;
+  }
+
+  header{
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+  }
