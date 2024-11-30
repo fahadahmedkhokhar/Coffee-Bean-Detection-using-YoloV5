@@ -8,7 +8,7 @@ We are detecting 4 classes from the input image of Beans:
 ### Step 1:
 Clone the repository
 ```bash
-git clone repo
+git clone https://github.com/fahadahmedkhokhar/Coffee-Bean-Detection-using-YoloV5
 ```
 ### Step 2:
 Move to the specified location.
