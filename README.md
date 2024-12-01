@@ -1,6 +1,6 @@
-# Coffee Beans Detection Web Application
+# Coffee Beans Live Detection Web Application
 
-This project is a web-based application for detecting coffee beans' quality using YOLOv5 and Django. The application classifies coffee beans into four categories from an input image:
+This project is a web-based application for detecting coffee beans' quality using YOLOv5 and Django. The application classifies coffee beans into four categories from an Live Stream:
 
 - **Broken**
 - **COCO**
