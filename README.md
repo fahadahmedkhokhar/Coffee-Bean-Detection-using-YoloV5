@@ -45,9 +45,6 @@ Install requirements using requirements.txt
 pip install -r requirement.txt
 ```
 
-## Video
-
-![Video](https://github.com/fahadahmedkhokhar/Coffee-Bean-Detection-using-YoloV5/blob/master/video.mp4)
 ## Report
 
 [Documents](https://github.com/fahadahmedkhokhar/Coffee-Bean-Detection-using-YoloV5/blob/master/Report.docx) are available
